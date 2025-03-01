@@ -2,13 +2,66 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Tic Tac Toe Game - The Odin Project - JavaScript Course</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="./assets/favicon_io (1)/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=allerta-stencil:400" rel="stylesheet" />
 </head>
 <body>
+    <div class="game-container">
+        <div class="game-title">
+            <h1>TIC - TAC - TOE Project</h1>
+        </div>
+
+        <!-- Option Menu -->
+        <div class="menu">
+            <button class="menu-button" data-mode="1vs1">1 vs 1</button>
+            <button class="menu-button" data-mode="1vsBot">1 vs Bot</button>
+        </div>
+
+        <!-- Game Container -->
+        <div class="dinamic-container hidden">
+            
+            <div class="stats-container">
+                <div class="player-container">
+                    <i class="fa-regular fa-hand-pointer fa-rotate-90"></i>
+                    <div class="player-score">
+                        <h2>PLAYER ONE</h2>
+                        <p class="score">00</p>
+                    </div>
+                </div>
+                <div class="player-container">
+                    <div class="player-score">
+                        <h2>PLAYER TWO</h2>
+                        <p class="score">00</p>
+                    </div>
+                    <i class="fa-regular fa-hand-pointer fa-rotate-270"></i>
+                </div>
+            </div>
+            
+
+            <div class="board-container">
+                <div class="board"></div>
+            </div>
+            
+        </div>
+
+        <!-- Round Result -->
+        <div class="game-result hidden">
+            <h2 class="result-message"></h2>
+            <button class="restart-button">Play again?</button>
+            <button class="change-mode-button">Change Mode</button>
+        </div>
+
+        <footer>
+            <h3>The Odin Project | mdev 2025</h3>
+        </footer>
+    </div>
     
-    <script src="script.js"></script>
+    <script src="game.js"></script>
+    <script src="dom.js"></script>
+    <script src="https://kit.fontawesome.com/84baef0874.js" crossorigin="anonymous"></script>
 </body>
 </html>
